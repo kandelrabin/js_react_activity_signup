@@ -1,12 +1,16 @@
+import { useState } from "react";
 import Counter from "../components/Counter";
 
 const SignUpContainer = () => {
+    const [archeryCount, setArcheryCount] = useState(0);
+    const [zorbCount, setZorbCount] = useState(0);
+    const [canoeCount, setCanoeCount] = useState(0);
     return (
         <>
             <h2>Activities:</h2>
-            <Counter title = {"Archery"} count ={0} />
-            <Counter title = {"Zorbing"} count={0} />
-            <Counter title = {"Canoeing"} count={0} />
+            <Counter title = {"Archery"} count ={archeryCount} onButtonClick = {setArcheryCount} />
+            <Counter title = {"Zorbing"} count={zorbCount} onButtonClick = {setZorbCount} />
+            <Counter title = {"Canoeing"} count={canoeCount} onButtonClick = {setCanoeCount} />
         </>
     );
 };
