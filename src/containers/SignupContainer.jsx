@@ -11,6 +11,7 @@ const SignUpContainer = () => {
             <Counter title = {"Archery"} count ={archeryCount} onButtonClick = {setArcheryCount} />
             <Counter title = {"Zorbing"} count={zorbCount} onButtonClick = {setZorbCount} />
             <Counter title = {"Canoeing"} count={canoeCount} onButtonClick = {setCanoeCount} />
+            <p>Total Sign-ups {archeryCount+zorbCount+canoeCount}</p>
         </>
     );
 };
